@@ -8,9 +8,10 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
-@WebServlet("/JoinAction")
-public class JoinAction extends HttpServlet {
+@WebServlet("/MyPage")
+public class MyPage extends HttpServlet {
 	private static final long serialVersionUID = 1L;
     
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -25,34 +26,13 @@ public class JoinAction extends HttpServlet {
 		
 		request.setCharacterEncoding("utf-8");
 		
-		String id = request.getParameter("id");
-		String pw = request.getParameter("pw");
-		String name = request.getParameter("name");
-		String email = request.getParameter("email");
+		//Servlet이 session 값을 얻어오는 방법
+		HttpSession session = request.getSession();
+		String id = (String)session.getAttribute("id");
 		
-		String[] arr = request.getParameterValues("hobby");
+		request.setAttribute("id", id);
 		
-		String hobby = "";
-		for (int i = 0; i < arr.length; i++) {
-			hobby += arr[i];
-			
-			if (i != arr.length - 1) {
-				hobby += ", ";
-			}
-		}
-		
-		MemberDTO mdto = new MemberDTO();
-		
-		mdto.setId(id);
-		mdto.setPw(pw);
-		mdto.setName(name);
-		mdto.setEmail(email);
-		mdto.setHobby(hobby);
-		
-		//jsp로 데이터 전송 request.setAttribute("속성명", 값);
-		request.setAttribute("mdto", mdto);
-		
-		RequestDispatcher dis = request.getRequestDispatcher("chapter09_servlet/02_joinAction.jsp");
+		RequestDispatcher dis = request.getRequestDispatcher("chapter09_servlet/05_myPage.jsp");
 		dis.forward(request, response);
 		
 	}

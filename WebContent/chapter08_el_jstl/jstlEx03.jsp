@@ -14,11 +14,41 @@
 		<c:out value="${ i }" />	
 	</c:forEach>
 	
-	<br>
+	<hr>
 	
 	<c:forEach var="i" begin="1" end="10" step="${ i = i+2 }">
 		<c:out value="${ i }" />
 	</c:forEach>
+	
+	<hr>
+	
+	<h3>2) forEach문2</h3>
+	
+	<c:forEach var="data" items="${ datas }">
+		<c:out value="${ data }" />
+	</c:forEach>
+	
+	<hr>
+	
+	<table border="1">
+		<tr>
+			<th>상품코드</th>
+			<th>상품명</th>
+			<th>부서코드</th>
+			<th>부서명</th>
+			<th>담당자명</th>
+		</tr>
+		
+		<c:forEach var="product" items="${ productList }">
+			<tr>
+				<td>${ product.pdCd }</td>
+				<td>${ product.pdNm }</td>
+				<td>${ product.deptCd }</td>
+				<td>${ product.deptNm }</td>
+				<td>${ product.mgrNm }</td>
+			</tr>
+		</c:forEach>
+	</table>
 
 	<%-- 
 

@@ -26,7 +26,7 @@ public class LoginAction extends HttpServlet {
 		
 		request.setCharacterEncoding("utf-8");
 		
-		//Servlet¿¡¼­ÀÇ session ¼³Á¤ ¹æ¹ı
+		//Servletì—ì„œì˜ session ê°’ì„ ì–»ì–´ì˜¤ëŠ” ë°©ë²•
 		HttpSession session =  request.getSession();
 		session.setAttribute("id", request.getParameter("id"));
 		

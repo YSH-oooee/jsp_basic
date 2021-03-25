@@ -18,19 +18,19 @@ public class JstlEx03 extends HttpServlet {
  
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		String[] datas = {"µ¥ÀÌÅÍ1", "µ¥ÀÌÅÍ2", "µ¥ÀÌÅÍ3", "µ¥ÀÌÅÍ4", "µ¥ÀÌÅÍ5"};
+		String[] datas = {"ë°ì´í„°1", "ë°ì´í„°2", "ë°ì´í„°3", "ë°ì´í„°4", "ë°ì´í„°5"};
 		
-		request.setAttribute("datas", datas);		//request¿¡ datas¸¦ ´ã¾Æ ¾Æ·¡ÀÇ °æ·Î·Î º¸³¿
+		request.setAttribute("datas", datas);		//requestì— datasê°’ì„ ì €ì¥
 		
 		ArrayList<ProductBean> productList = new ArrayList<ProductBean>();
 		
 		for (int i = 1; i <= 10; i++) {
 			ProductBean product = new ProductBean();
 			product.setPdCd("P00" + i);
-			product.setPdNm("±â°è½Ä Å°º¸µå ¹öÀü" + i);
+			product.setPdNm("ë°ì´í„°" + i);
 			product.setDeptCd("dept" + i);
-			product.setDeptNm("»ç¾÷ºÎ " + i + "ÆÀ");
-			product.setMgrNm("È«±æµ¿");
+			product.setDeptNm("ì‚¬ì—…ë¶€ " + i + "íŒ€");
+			product.setMgrNm("í™ê¸¸ë™");
 			
 			productList.add(product);
 		}

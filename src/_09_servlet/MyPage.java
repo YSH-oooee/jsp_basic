@@ -26,11 +26,12 @@ public class MyPage extends HttpServlet {
 		
 		request.setCharacterEncoding("utf-8");
 		
-		//Servlet�� session ���� ������ ���
+		//Servlet에서의 session 값을 얻어오는 방법
 		HttpSession session = request.getSession();
 		String id = (String)session.getAttribute("id");
 		
-		request.setAttribute("id", id);
+		//세션을 이용하여 관련 정보를 가져오는 로직(코드)
+		//request.setAttribute("id", id);
 		
 		RequestDispatcher dis = request.getRequestDispatcher("chapter09_servlet/05_myPage.jsp");
 		dis.forward(request, response);

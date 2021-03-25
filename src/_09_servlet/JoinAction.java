@@ -49,7 +49,8 @@ public class JoinAction extends HttpServlet {
 		mdto.setEmail(email);
 		mdto.setHobby(hobby);
 		
-		//jsp·Î µ¥ÀÌÅÍ Àü¼Û request.setAttribute("¼Ó¼º¸í", °ª);
+		// jspë¡œ ë°ì´í„° ì „ì†¡ë°©ë²•
+		// request.setAttribute(ì†ì„±ëª… , ê°’);
 		request.setAttribute("mdto", mdto);
 		
 		RequestDispatcher dis = request.getRequestDispatcher("chapter09_servlet/02_joinAction.jsp");

@@ -9,25 +9,25 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/Join")		// url Á¢±Ù °æ·Î, »ç¿ëÀÚ°¡ ÇÁ·ÎÁ§Æ® ÀÌ¸§/url ÀÌ¸§À¸·Î À¥½Ã½ºÅÛ Á¢±Ù
+@WebServlet("/Join")		// url ì ‘ê·¼ ê²½ë¡œ , ì‚¬ìš©ìê°€ í”„ë¡œì íŠ¸ ì´ë¦„/url ì´ë¦„ìœ¼ë¡œ ì›¹ì‹œìŠ¤í…œì— ì ‘ê·¼í•œë‹¤.
 public class Join extends HttpServlet {
 	
-	private static final long serialVersionUID = 1L;		// servlet »ı¼º ½Ã, ±âº»°ªÀ¸·Î »ı¼º(ÀÇ¹Ì ¾ø´Â µí)
+	private static final long serialVersionUID = 1L;	// Servletìƒì„±ì‹œ ê¸°ë³¸ê°’ìœ¼ë¡œ ìƒì„± , í¬ê²Œ ì˜ë¯¸ x
 
-	// get Çü½ÄÀ¸·Î ¿äÃ»ÀÌ µé¾î¿ÔÀ» ¶§, ¾Æ·¡ÀÇ ¸Ş¼Òµå µ¿ÀÛ
+	// getí˜•ì‹ìœ¼ë¡œ ìš”ì²­ì´ ë“¤ì–´ì™”ì„ë•Œ ì•„ë˜ì˜ ë©”ì„œë“œê°€ ë™ì‘
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		reqPro(request, response);
 	}
-	// post Çü½ÄÀ¸·Î ¿äÃ»ÀÌ µé¾î¿ÔÀ» ¶§, ¾Æ·¡ÀÇ ¸Ş¼Òµå µ¿ÀÛ
+	// postí˜•ì‹ìœ¼ë¡œ ìš”ì²­ì´ ë“¤ì–´ì™”ì„ë•Œ ì•„ë˜ì˜ ë©”ì„œë“œê°€ ë™ì‘
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		reqPro(request, response);
 	}
 	
-	// À§ÀÇ µÎ°³¸¦ ±»ÀÌ µû·Î ÁöÁ¤ÇÏÁö ¾Ê°í, °ü¿ëÀûÀ¸·Î ¾Æ·¡ÀÇ ¸Ş¼Òµå¸¦ ÀÌ¿ëÇÏ¿© »ç¿ë
+	// ï¿½ï¿½ï¿½ï¿½ ï¿½Î°ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ê°ï¿½, ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Æ·ï¿½ï¿½ï¿½ ï¿½Ş¼Òµå¸¦ ï¿½Ì¿ï¿½ï¿½Ï¿ï¿½ ï¿½ï¿½ï¿½
 	protected void reqPro(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		// ÆäÀÌÁö ÀÌµ¿ ¹æ½Ä
-		// Æ÷¿öµù °æ·Î : "ÆĞÅ°Áö¸í, jspÆÄÀÏ¸í"
+		// í˜ì´ì§€ ì´ë™ ë°©ì‹
+		// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ : "ï¿½ï¿½Å°ï¿½ï¿½ï¿½ï¿½, jspï¿½ï¿½ï¿½Ï¸ï¿½"
 		RequestDispatcher dis = request.getRequestDispatcher("chapter09_servlet/01_join.jsp");
 		dis.forward(request, response);
 		

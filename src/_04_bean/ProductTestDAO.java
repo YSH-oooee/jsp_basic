@@ -4,11 +4,11 @@ public class ProductTestDAO {
 	
 	public void printData(ProductBean pb) {
 		
-		System.out.println("»óÇ°ÄÚµå : " + pb.getPdCd());
-		System.out.println("»óÇ°ÀÌ¸§ : " + pb.getPdNm());
-		System.out.println("ºÎ¼­ÄÚµå : " + pb.getDeptCd());
-		System.out.println("ºÎ¼­ÀÌ¸§ : " + pb.getDeptNm());
-		System.out.println("´ã´çÀÚÀÌ¸§ : " + pb.getMgrNm());
+		System.out.println("ìƒí’ˆì½”ë“œ : " + pb.getPdCd());
+		System.out.println("ìƒí’ˆì´ë¦„ : " + pb.getPdNm());
+		System.out.println("ë¶€ì„œì½”ë“œ : " + pb.getDeptCd());
+		System.out.println("ë¶€ì„œì´ë¦„ : " + pb.getDeptNm());
+		System.out.println("ë‹´ë‹¹ìì´ë¦„ : " + pb.getMgrNm());
 		
 	}
 
